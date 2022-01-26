@@ -18,7 +18,7 @@ Then, in your `_Imports.razor` add this line
 Based on the parameters, the component adds automatically the required scripts and CSS in your page.
 
 ### Add a CodeSnippet
-For example, I want to add a C# code with the **Visual Studio* Style. Between the CodeSippet tag, you have to add the code you want to show. This is the code.
+For example, I want to add a C# code with the **Visual Studio* Style. Between the CodeSnippet tag, you have to add the code you want to show. This is the code.
 
 ```
 <CodeSnippet Language="Language.csharp" Style="Style.VisualStudio">
@@ -327,7 +327,7 @@ If you have multiple `CodeSnippet` in the same pag, you can avoid to load multip
 |---|---|---|
 | [DataTable for Blazor](https://www.puresourcecode.com/dotnet/net-core/datatable-component-for-blazor/) | [Forum](https://www.puresourcecode.com/forum/forum/datatables/) | DataTable component for Blazor WebAssembly and Blazor Server |
 | [Markdown editor for Blazor](https://www.puresourcecode.com/dotnet/blazor/markdown-editor-with-blazor/) | [Forum](https://www.puresourcecode.com/forum/forum/markdown-editor-for-blazor/) |  This is a Markdown Editor for use in Blazor. It contains a live preview as well as an embeded help guide for users. |
-| [CodeSnipper for Blazor](https://www.puresourcecode.com/dotnet/blazor/code-snippet-component-for-blazor/) | [Forum](https://www.puresourcecode.com/forum/codesnippet-for-blazor/) | Add code snippet in your Blazor pages for 196 programming languages with 243 styles |
+| [CodeSnipper for Blazor](https://www.puresourcecode.com/dotnet/blazor/add-code-snippet-in-razor-pages/) | [Forum](https://www.puresourcecode.com/forum/codesnippet-for-blazor/) | Add code snippet in your Blazor pages for 196 programming languages with 243 styles |
 | [Copy To Clipboard](https://www.puresourcecode.com/dotnet/blazor/copy-to-clipboard-component-for-blazor/) | [Forum](https://www.puresourcecode.com/forum/copytoclipboard/) | Add a button to copy text in the clipbord | 
 | SVG Icons and flags for Blazor | [Forum](https://www.puresourcecode.com/forum/icons-and-flags-for-blazor/) | Library with a lot of SVG icons and SVG flags to use in your Razor pages |
 | [Modal dialog for Blazor](https://www.puresourcecode.com/dotnet/blazor/modal-dialog-component-for-blazor/) | [Forum](https://www.puresourcecode.com/forum/forum/modal-dialog-for-blazor/) |  Simple Modal Dialog for Blazor WebAssembly |
