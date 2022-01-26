@@ -1,0 +1,31 @@
+﻿<pre class="code"><code class="@Language">
+@ChildContent
+</code></pre>
+
+@code {
+    [Inject] private IJSRuntime _js { get; set; }
+
+    [Parameter] public RenderFragment ChildContent { get; set; }
+    [Parameter] public Language Language { get; set; } = Language.csharp;
+    [Parameter] public Style Style { get; set; } = Style.VisualStudio;
+    [Parameter] public bool LoadMainScript { get; set; } = true;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+
+        if (firstRender)
+        {
+            string scriptPath = "/_content/PSC.Blazor.Components.CodeSnippet/";
+            string mainScript = $"{scriptPath}highlight.min.js";
+            string langScript = $"{scriptPath}languages/{Language.ToString()}.min.js";
+            string cssStyle = $"{scriptPath}styles/{Style.GetDescription()}.min.css";
+
+            if (LoadMainScript)
+                await _js.InvokeVoidAsync("loadJs", mainScript);
+
+            await _js.InvokeVoidAsync("loadCSS", cssStyle);
+            await _js.InvokeVoidAsync("loadJs", langScript);
+        }
+    }
+}

@@ -1,0 +1,61 @@
+﻿@page "/"
+
+<PageTitle>Code Snippet</PageTitle>
+
+<h3>CSharp (Visual Studio style)</h3>
+<CodeSnippet Language="Language.csharp" Style="Style.VisualStudio">
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
+namespace Client.Api
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
+        public static IHostBuilder
+            CreateHostBuilder(string[] args) =>
+                Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup&lt;Startup>();
+            });
+    }
+}
+</CodeSnippet>
+
+<h3>XML (Android Studio style)</h3>
+<CodeSnippet Language="Language.java" Style="Style.VisualStudio" LoadMainScript="false">
+public class AccountTransferBroadcastReceiver extends BroadcastReceiver {
+    private static final String TAG = "ATBroadcastReceiver";
+
+    public void onReceive(Context context, Intent intent) {
+        Log.d(TAG, "Received intent:" + intent);
+        // Long running tasks, like calling Account Transfer API, shouldn't happen here. Start a
+        // foreground service to perform long running tasks.
+        Intent serviceIntent = AccountTransferService.getIntent(context, intent.getAction());
+        if (Build.VERSION.SDK_INT >= 26) {
+            context.startForegroundService(serviceIntent);
+        } else {
+            context.startService(serviceIntent);
+        }
+    }
+}
+</CodeSnippet>
+
+<h3>Swift (XCode style)</h3>
+<CodeSnippet Language="Language.swift" Style="Style.VisualStudio" LoadMainScript="false">
+override func viewDidLoad() {
+    super.viewDidLoad()
+
+    let nib = UINib(nibName: "TableCell", bundle: nil)
+    tableView.register(nib, forCellReuseIdentifier: tableViewCellIdentifier)
+    
+    resultsTableController =
+        self.storyboard?.instantiateViewController(withIdentifier: "ResultsTableController") 
+             as? ResultsTableController
+    // This view controller is interested in table view row selections.
+    resultsTableController.tableView.delegate = self
+}
+</CodeSnippet>

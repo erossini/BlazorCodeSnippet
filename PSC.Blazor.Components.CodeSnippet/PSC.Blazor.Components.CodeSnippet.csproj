@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageIcon>psc_logo.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <ApplicationIcon>psc_logo.ico</ApplicationIcon>
+    <Description>Show your code nicely</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="psc_logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.1" />
+    <PackageReference Include="PSC.Extensions" Version="6.0.19" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="psc_logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
